@@ -60,3 +60,4 @@ To get the latest version you can simply run
 ```sh
 docker run -p 8080:80 hebertrfreitas/fastapi-example:latest
 ```
+
