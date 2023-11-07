@@ -57,7 +57,6 @@ This repository contains an github action to publish images in docker hub.
 
 To get the latest version you can simply run
 
-```sh
+```shell
 docker run -p 8080:80 hebertrfreitas/fastapi-example:latest
 ```
-
