@@ -1,6 +1,8 @@
-from fastapi import FastAPI, Depends
 from typing import Annotated
+
+from fastapi import Depends, FastAPI
 from service.main_service import MainService
+
 app = FastAPI()
 
 
