@@ -2,9 +2,11 @@ from typing import Annotated
 
 from fastapi import Depends, FastAPI
 from service.main_service import MainService
+from middlewares.profilling_middleware import add_profile_middleware
 
 app = FastAPI()
 
+add_profile_middleware(app)
 
 @app.get('/')
 def read_root():

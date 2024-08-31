@@ -60,3 +60,19 @@ To get the latest version you can simply run
 ```shell
 docker run -p 8080:80 hebertrfreitas/fastapi-example:latest
 ```
+
+#### Endpoints available
+
+This sample app comes with the following test endpoints and options:
+
+
+```shell
+#retrieve a random pokemon info from https://pokeapi.co/
+curl localhost:8000/pokemon
+#make the request and generate a profile file using pyinstrument
+curl localhost:8000/pokemon?profile=1
+```
+
+
+
+
