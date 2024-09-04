@@ -15,7 +15,7 @@ class PokemonService:
             pokemon_id = random.randint(1, 155)
 
         try:
-            response = httpx.get(url=f'https://pokeapi.co/api/v2/pokemon/{pokemon_id}abc')
+            response = httpx.get(url=f'https://pokeapi.co/api/v2/pokemon/{pokemon_id}')
             response.raise_for_status()
             return response.json()
         except httpx.HTTPError as exc:
