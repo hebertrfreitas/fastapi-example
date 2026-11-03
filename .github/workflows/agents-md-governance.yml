@@ -1,0 +1,18 @@
+name: AGENTS.md governance
+on:
+    pull_request:
+        types: [opened, synchronize, reopened]
+permissions:
+    contents: write
+    pull-requests: write
+jobs:
+    agents-md:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  repository: ${{ github.event.pull_request.head.repo.full_name }}
+                  ref: ${{ github.head_ref }}
+            - uses: hebertrfreitas/agents-md-governance@v1
+              env:
+                  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
