@@ -14,5 +14,7 @@ jobs:
                   repository: ${{ github.event.pull_request.head.repo.full_name }}
                   ref: ${{ github.head_ref }}
             - uses: hebertrfreitas/agents-md-governance@v1
+              with:
+                  model: openai/gpt-6-luna
               env:
                   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
